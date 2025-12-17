@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Entity       //converting column as a table
 public class Student{
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     private String name;
     private String dept;
