@@ -7,13 +7,13 @@ import jakarta.persistence.*;
 public class Student{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     private String dept;
     private LocalDate dob;
     private float cgpa;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
     public String getName() {
@@ -28,7 +28,7 @@ public class Student{
     public LocalDate getDob() {
         return dob;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public void setName(String name) {
@@ -43,7 +43,7 @@ public class Student{
     public void setDob(LocalDate dob) {
         this.dob = dob;
     }
-    public Student(long id, String name, String dept, float cgpa, LocalDate dob) {
+    public Student(Long id, String name, String dept, float cgpa, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.dept = dept;
