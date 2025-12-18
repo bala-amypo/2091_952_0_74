@@ -25,7 +25,11 @@ public class StudentServiceImpl implements StudentService{
     public String updateData(Long id,Student st){
         boolean status=stdrepo.existById(id);
         if(status){
-            return
+            st.setId(id);
+            stdrepo.save(st);
+            return "Student updated successfully";
+        }else{
+            return "Student with ID "+id+"not found";
         }
     }
 }
