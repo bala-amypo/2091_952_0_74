@@ -5,4 +5,5 @@ public interface StudentService{
     Student poststudent(Student st);
     List<Student> getstudent();
     Optional<Student> getById(Long id);
+    
 }
